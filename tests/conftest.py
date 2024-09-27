@@ -47,7 +47,7 @@ def solution_runner(request):
     solution = int(request.cls.__name__[-2:])
     chapter = "chapter_0" + str(chapter) if chapter < 10 else "chapter_" + str(chapter)
     solution = "solution_" + str(solution) + ".py"
-    file_path = os.path.join("course", chapter, "solutions", solution)
+    file_path = os.path.join(os.sep, "course", chapter, "solutions", solution)
     result = []
 
     if not os.path.isfile(file_path):
