@@ -47,17 +47,18 @@ def solution_runner(request):
     solution = int(request.cls.__name__[-2:])
     chapter = "chapter_0" + str(chapter) if chapter < 10 else "chapter_" + str(chapter)
     solution = "solution_" + str(solution) + ".py"
-    file_path = os.path.join(os.sep, "course", chapter, "solutions", solution)
+    file_path = os.path.join("course", chapter, "solutions", solution)
     result = []
 
     if not os.path.isfile(file_path):
+        print(file_path)
         pytest.fail("Solution not exist")
     try:
         inputed_values, timeout = marker.args
         if isinstance(inputed_values, str):
             vals = inputed_values + "\n"
             p = Popen(
-                ["python3", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
+                ["python", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
             )
             p.stdin.writelines(vals)
             p.stdin.close()
@@ -66,7 +67,7 @@ def solution_runner(request):
         elif isinstance(inputed_values, tuple):
             vals = map(lambda x: x + "\n", inputed_values)
             p = Popen(
-                ["python3", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
+                ["python", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
             )
             p.stdin.writelines(vals)
             p.stdin.close()
@@ -77,7 +78,7 @@ def solution_runner(request):
                 for vals in inputed_values:
                     vals = map(lambda x: x + "\n", vals)
                     p = Popen(
-                        ["python3", file_path],
+                        ["python", file_path],
                         stdout=PIPE,
                         stdin=PIPE,
                         stderr=PIPE,
@@ -91,7 +92,7 @@ def solution_runner(request):
                 for vals in inputed_values:
                     vals += "\n"
                     p = Popen(
-                        ["python3", file_path],
+                        ["python", file_path],
                         stdout=PIPE,
                         stdin=PIPE,
                         stderr=PIPE,
