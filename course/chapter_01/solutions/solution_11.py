@@ -1,4 +1,6 @@
 s = float(input ())
 x = float(input ())
 v = s / x
-print(v)
+z = v / s
+b = z / x
+print (b)
