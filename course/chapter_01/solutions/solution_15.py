@@ -1,12 +1,12 @@
-a = input() * 1
-b = input()* 3
-c =  input()* 5
-x =  input()* 3
-v =  input()* 5
-q =  input()* 7
-s =  input()* 9
-o =  input()* 5
-f =  input()* 7
-h =  input()* 9
-k =  input()* 11
-print(a)
+a = input()
+print(" " *5 + a * 1)
+print(" " *4 + a * 3)
+print(" " *3 + a * 5)
+print(" " *4 + a * 3)
+print(" " *3 + a * 5)
+print(" " *2 + a * 7)
+print(" " *1 + a * 9)
+print(" " *3 + a * 5)
+print(" " *2 + a * 7)
+print(" " *1 + a * 9)
+print(" " *0 + a * 11)
