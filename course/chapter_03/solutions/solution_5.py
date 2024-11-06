@@ -1,8 +1,8 @@
-ford=float(input())
+ford = ""
 password="123456789"
-if ford==password:
-    print("Доступ разрешён.")
-else:
-    print("Неверный пароль, попробуйте снова.")
-
-
+while ford!=password:
+    ford=input()
+    if ford==password:
+        print("Доступ разрешён.")
+    else:
+        print("Неверный пароль, попробуйте снова.")
