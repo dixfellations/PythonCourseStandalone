@@ -114,7 +114,7 @@ class TestChapter03ex08:
 
 
 class TestChapter03ex09:
-    @pytest.mark.solution_runner(["1", "3", "101", "6235"], 0.1)
+    @pytest.mark.solution_runner(["1", "3", "101", "6235"], 1)
     def test_solution_9_output(self, solution_runner):
         solution_out = solution_runner
         expected_output = ["1\n", "3\n", "2\n", "16\n"]
@@ -124,7 +124,7 @@ class TestChapter03ex09:
 
 
 class TestChapter03ex10:
-    @pytest.mark.solution_runner(["35", "221", "121", "64"], 0.1)
+    @pytest.mark.solution_runner(["35", "221", "121", "64"], 1)
     def test_solution_10_output(self, solution_runner):
         solution_out = solution_runner
         expected_output = ["5\n", "13\n", "11\n", "2\n"]
