@@ -1,7 +1,8 @@
-count=(input)
-while count <= 10:
-    print(count)
-    if count == 5:
-        count += 1
-        continue  # Пропускаем итерацию, когда count равно 5
-    count += 1
+a=int(input())
+while a <= 10:
+    if a == 5:
+        a += 1
+        continue  # Пропускаем итерацию, когда a равно -
+    print(a)
+    a -= 1
+
