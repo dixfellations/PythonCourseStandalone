@@ -1,5 +1,5 @@
 N=int(input())
-a=0^2
+a=N^2
 for i in range(1, N, 1):
-    a=i*a
+    a=i*a^2
 print(a)

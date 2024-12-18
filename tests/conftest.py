@@ -22,7 +22,7 @@ def solution_runner(request):
         if isinstance(inputed_values, str):
             vals = inputed_values + "\n"
             p = Popen(
-                ["python", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
+                ["python3", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
             )
             p.stdin.writelines(vals)
             p.stdin.close()
@@ -31,7 +31,7 @@ def solution_runner(request):
         elif callable(inputed_values):
             vals = inputed_values() + "\n"
             p = Popen(
-                ["python", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
+                ["python3", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
             )
             p.stdin.writelines(vals)
             p.stdin.close()
@@ -40,7 +40,7 @@ def solution_runner(request):
         elif isinstance(inputed_values, tuple):
             vals = [val() + "\n" if callable(val) else val + "\n" for val in inputed_values]
             p = Popen(
-                ["python", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
+                ["python3", file_path], stdout=PIPE, stdin=PIPE, stderr=PIPE, text=True
             )
             p.stdin.writelines(vals)
             p.stdin.close()
@@ -51,7 +51,7 @@ def solution_runner(request):
                 for vals in inputed_values:
                     vals = [val() + "\n" if callable(val) else val + "\n" for val in vals]
                     p = Popen(
-                        ["python", file_path],
+                        ["python3", file_path],
                         stdout=PIPE,
                         stdin=PIPE,
                         stderr=PIPE,
@@ -65,7 +65,7 @@ def solution_runner(request):
                 for vals in inputed_values:
                     vals += "\n"
                     p = Popen(
-                        ["python", file_path],
+                        ["python3", file_path],
                         stdout=PIPE,
                         stdin=PIPE,
                         stderr=PIPE,
