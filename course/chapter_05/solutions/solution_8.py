@@ -1,0 +1,6 @@
+z=float(input())
+v=float(input())
+print(z+v==z+v)
+print(z-v==z-v)
+print(z*v==z*v)
+print(z/v==z/v)

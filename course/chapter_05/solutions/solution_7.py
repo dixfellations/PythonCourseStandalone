@@ -1,0 +1,5 @@
+z=input()
+x=int(input())
+print("Привет",end=", ")
+print(z,end="! ")
+print("Тебе",x,"лет",end=".")

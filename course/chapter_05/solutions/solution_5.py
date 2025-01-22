@@ -1,4 +1,4 @@
-x=int(input())
-v=('!_!')
-for j in range(x):
-    print(v,end="\t")
+n=int(input())
+for i in range(1,n+1):
+
+    print(i," ")
