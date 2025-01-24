@@ -1,0 +1,6 @@
+n=input()
+z=float(input())
+x=float(input())
+c=float(input())
+print("Средняя оценка студента",n,end=": ")
+print((z+x+c)/3)
