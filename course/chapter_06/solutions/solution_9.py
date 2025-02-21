@@ -5,5 +5,7 @@ cw = len(str(max_n)) + 1
 for i in range(h):
     for j in range(w):
         n = i + j * h + 1
-        print(f"{n:<{cw}}", end="")
-    print()
+        if :
+            print(f"{n:<{cw}}", end="")
+        else:
+        print(f"{n:<{cw}}")
