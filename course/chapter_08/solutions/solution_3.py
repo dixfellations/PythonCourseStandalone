@@ -1,14 +1,15 @@
-a = input("Введите первый элемент: ")
-b = input("Введите второй элемент: ")
-c = input("Введите третий элемент: ")
-a2 = input("Введите первый элемент: ")
-b2= input("Введите второй элемент: ")
-c2= input("Введите третий элемент: ")
-s={a+b+c}
-v={a2+b2+c2}
-if s>v:
-    print((s)>(v))
-if s<v:
-    print((s)<(v))
+year1 = int(input())
+month1 = int(input())
+day1 = int(input())
+year2 = int(input())
+month2 = int(input())
+day2 = int(input())
+date1 = (year1, month1, day1)
+date2 = (year2, month2, day2)
+if date1 > date2:
+    result = ">"
+elif date1 < date2:
+    result = "<"
 else:
-    print((s)==(v))
+    result = "="
+print(f"{date1} {result} {date2}")
