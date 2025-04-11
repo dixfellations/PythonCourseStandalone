@@ -1,7 +1,5 @@
-n= input()
-n1=n[::-1]
-for i in n:
-    if n==n1:
-        print("Палиндром")
-    elif n!=n1:
-        print("Не палиндром")
+s = input().strip()
+if s == s[::-1]:
+    print("Палиндром")
+else:
+    print("Не палиндром")
