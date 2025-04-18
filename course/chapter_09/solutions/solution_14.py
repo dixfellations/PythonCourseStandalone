@@ -1,0 +1,5 @@
+text = input()
+v= input()
+words = text.split()
+new_sentence = v.join(words)
+print(new_sentence)
