@@ -5,12 +5,3 @@ for word in s:
         word = word.capitalize()
     result.append(word)
 print('Результат:', ' '.join(result))
-        
-        
-        
-        
-        
-        
-        
-        
-    
