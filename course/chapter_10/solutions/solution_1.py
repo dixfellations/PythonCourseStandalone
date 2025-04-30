@@ -1,5 +1,4 @@
-my_list= input( )
-my={ }
-s=''.join(my_list(my))
-m_str= ''.join(sorted(my_list,reverse=True))
-print(m_str)
+numbers = list(map(int, input().split()))
+unique_numbers = list(set(numbers))
+unique_numbers.sort(reverse=True)
+print(' '.join(map(str, unique_numbers)))
