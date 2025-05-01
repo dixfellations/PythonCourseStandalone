@@ -1,0 +1,5 @@
+str1= input().strip()
+str2= input().strip()
+str3= input().strip()
+c = sorted(set(str1) & set(str2)& set(str3))
+print(' '.join(c))
